@@ -15,13 +15,14 @@ def process_directory(path):
         try:
             im = Image.open(path + '/' + image)
         except:
+            print path + '/' + image + ' may not be an image?'
             continue
 
         width, height = im.size
         #print width, height
         if width < height * 0.9:
             im_rotate = im.rotate(90, expand=True)
-            im_rotate = im_rotate.resize((height, width))
+            #im_rotate = im_rotate.resize((height, width))
             #im_rotate.show()
 
             im_rotate.save(path + '_rotated/' + image)
