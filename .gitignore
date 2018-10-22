@@ -1,1 +1,5 @@
 *.swp
+*.txt
+154*
+.DS_Store
+*.md
